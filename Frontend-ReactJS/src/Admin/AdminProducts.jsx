@@ -164,8 +164,8 @@ const AdminProducts = () => {
                         <input className='w-100 form-control mt-2' onChange={handleFileChange} type="file" id='image' accept='image/*' />
                     </div>
                     <div className='mt-4'>
-                        <button className='myBtn-succ me-2' onClick={handleSave}>Save</button>
-                        <button className='myBtn-dang' onClick={() => setData({ id: 0, name: "", categoryid: 0, unitid: 0, description: "", gstpercent: 0, image: null })}>Cancel</button>
+                        <button style={{fontSize:"12px"}} className='myBtn-succ me-2' onClick={handleSave}>Save</button>
+                        <button style={{fontSize:"12px"}} className='myBtn-dang' onClick={() => setData({ id: 0, name: "", categoryid: 0, unitid: 0, description: "", gstpercent: 0, image: null })}>Cancel</button>
                     </div>
                 </div>
             </div>
@@ -195,8 +195,8 @@ const AdminProducts = () => {
                                     <td>{item.description}</td>
                                     <td>{item.gstpercent}%</td>
                                     <td>
-                                        <a href="#" onClick={() => editProduct(item)}><i className="fa-solid fa-pencil text-primary"></i></a>
-                                        <a href="#" onClick={() => handleDelete(item.id)}><i className="fa-regular fa-trash-can ms-3 text-danger"></i></a>
+                                        <button style={{fontSize:"12px"}} className='myBtn-Edit' onClick={() => editProduct(item)}>Edit</button>
+                                        <button style={{fontSize:"12px"}} className='myBtn-dang-Delete ms-1' onClick={() => handleDelete(item.id)}>Delete</button>
                                     </td>
                                 </tr>
                             ))}

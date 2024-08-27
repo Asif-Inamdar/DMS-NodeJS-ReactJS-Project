@@ -152,8 +152,8 @@ const Users = () => {
                     </div>
 
                     <div className='mt-4'>
-                        <button className='myBtn-succ me-2' onClick={handleSave}>{editMode ? 'Update' : 'Save'}</button>
-                        <button className='myBtn-dang' onClick={exitEditMode}>Cancel</button>
+                        <button style={{fontSize:"12px"}} className='myBtn-succ me-2' onClick={handleSave}>{editMode ? 'Update' : 'Save'}</button>
+                        <button style={{fontSize:"12px"}} className='myBtn-dang' onClick={exitEditMode}>Cancel</button>
                     </div>
                 </div>
             </div>
@@ -187,8 +187,8 @@ const Users = () => {
                                                 <td>{item.password}</td>
                                                 <td>{item.utype}</td>
                                                 <td>
-                                                    <a href="#" onClick={() => enterEditMode(item.id)}><i className="fa-solid fa-pencil text-primary"></i></a>
-                                                    <a href="#" onClick={() => handleDelete(item.id)}><i className="fa-regular fa-trash-can ms-3 text-danger"></i></a>
+                                                    <button style={{fontSize:"12px"}} className='myBtn-Edit' onClick={() => enterEditMode(item.id)}>Edit</button>
+                                                    <button style={{fontSize:"12px"}} className='myBtn-dang-Delete ms-1' onClick={() => handleDelete(item.id)}>Delete</button>
                                                 </td>
                                             </tr>
                                         ))}

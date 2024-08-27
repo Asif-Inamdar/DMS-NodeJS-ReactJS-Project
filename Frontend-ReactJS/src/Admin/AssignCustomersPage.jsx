@@ -102,8 +102,8 @@ const AssignCustomersPage = () => {
                         }
                     </tbody>
                 </table>
-                <button className='btn btn-success'>Assign Customers</button>
-                <button className='btn btn-danger ms-1' onClick={() => navigate(-1)}>Cancel</button>
+                <button style={{fontSize:"12px"}} className='btn btn-success'>Assign Customers</button>
+                <button style={{fontSize:"12px"}} className='btn btn-danger ms-1' onClick={() => navigate(-1)}>Cancel</button>
             </div>
         </div>
     );

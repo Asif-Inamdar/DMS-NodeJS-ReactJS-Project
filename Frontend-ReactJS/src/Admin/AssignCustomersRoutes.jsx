@@ -9,8 +9,6 @@ const AssignCustomersRoutes = () => {
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(undefined)
     // let [list, setList] = useState([]);
-
-
     // Function to fetch routes data
     const bind = () => {
         axios.get(`${process.env.REACT_APP_BASE_URL}routes`, getHeaders())

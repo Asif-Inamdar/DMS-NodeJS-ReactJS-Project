@@ -131,8 +131,8 @@ const Units = () => {
                         placeholder="Enter unit name"
                     />
                     <div className='mt-3'>
-                        <button className='myBtn-succ' onClick={handleSave}>{editMode ? 'Update' : 'Save'}</button>
-                        <button className='myBtn-dang ms-1' onClick={exitEditMode}>Cancel</button>
+                        <button style={{fontSize:"12px"}} className='myBtn-succ' onClick={handleSave}>{editMode ? 'Update' : 'Save'}</button>
+                        <button style={{fontSize:"12px"}} className='myBtn-dang ms-1' onClick={exitEditMode}>Cancel</button>
                     </div>
                 </div>
             </div>
@@ -159,8 +159,8 @@ const Units = () => {
                                                 <th scope="row">{index + 1}</th>
                                                 <td>{item.name}</td>
                                                 <td>
-                                                    <a href="#" onClick={() => enterEditMode(item.id)}><i className="fa-solid fa-pencil text-primary"></i></a>
-                                                    <a href="" onClick={() => handleDelete(item.id)}><i className="fa-regular fa-trash-can ms-4 text-danger"></i></a>
+                                                    <button style={{fontSize:"12px"}} className='myBtn-Edit' onClick={() => enterEditMode(item.id)}>Edit</button>
+                                                    <button style={{fontSize:"12px"}} className='myBtn-dang-Delete ms-1' onClick={() => handleDelete(item.id)}>Delete</button>
                                                 </td>
                                             </tr>
                                         ))}

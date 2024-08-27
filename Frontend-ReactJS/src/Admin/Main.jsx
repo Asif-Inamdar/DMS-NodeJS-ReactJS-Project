@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 
 const Main = () => {
     let navigate = useNavigate();
-
     let [user, setUser] = useState({});
 
     useEffect(() => {
@@ -13,6 +12,7 @@ const Main = () => {
             navigate("/login")
         }
     }, [])
+
 
     return (
         <div className='container mt-5'>
@@ -33,9 +33,7 @@ const Main = () => {
             <div className='mt-2 ms-5'>
                 <img width={900} src={require('../assets/img/Banner1.jpg')} alt="" />
             </div>
-
-
-
+            
             <div id="root">
                 <div class="container pt-5 mt-2">
                     <div class="row align-items-stretch">

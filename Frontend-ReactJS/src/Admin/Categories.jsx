@@ -107,8 +107,8 @@ const Categories = () => {
                         placeholder="Enter categories name"
                     />
                     <div className='mt-3'>
-                        <button className='myBtn-succ' onClick={handleSave}>{editingCategoryId ? 'Update' : 'Save'}</button>
-                        <button className='myBtn-dang ms-1' onClick={() => setData({ id: 0, name: "" })}>Cancel</button>
+                        <button style={{fontSize:"12px"}} className='myBtn-succ' onClick={handleSave}>{editingCategoryId ? 'Update' : 'Save'}</button>
+                        <button style={{fontSize:"12px"}} className='myBtn-dang ms-1' onClick={() => setData({ id: 0, name: "" })}>Cancel</button>
                     </div>
                 </div>
             </div>
@@ -133,8 +133,8 @@ const Categories = () => {
                                                 <th scope="row">{index + 1}</th>
                                                 <td>{item.name}</td>
                                                 <td>
-                                                    <a href="" onClick={() => handleEdit(item)}><i className="fa-solid fa-pencil text-primary"></i></a>
-                                                    <a href="" onClick={() => handleDelete(item.id)}><i className="fa-regular fa-trash-can ms-4 text-danger"></i></a>
+                                                    <button style={{fontSize:"12px"}} className='myBtn-Edit' onClick={() => handleEdit(item)}>Edit</button>
+                                                    <button style={{fontSize:"12px"}} className='myBtn-dang-Delete ms-1' onClick={() => handleDelete(item.id)}>Delete</button>
                                                 </td>
                                             </tr>
                                         ))}
